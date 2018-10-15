@@ -6,15 +6,13 @@ class couse {
     private $name;
     private $size;
     private $arv_eks;
-    private $students;
 
-    public function __construct($code = null, $name = null, $size = null, ) {
-        parent::__construct($lastname, $firstname);
+    public function __construct($code = null, $name = null, $size = null, $arv_eks = null) {
         $this->group=$group;
     }
     
     public function __toString() {
-        return parent::__toString()." - ".$this->group;
+        return $this->group;
     }
 
     public function printInfo() {
