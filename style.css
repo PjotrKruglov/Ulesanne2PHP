@@ -1,12 +1,12 @@
 body {
-    background-image: url(http://kreativo.se/backlogin.jpg);
+    background-image: url(https://mdbootstrap.com/img/Photos/Others/background.jpg);
     font-family: "Helvetica Neue", Helvetica, Arial;
     padding-top: 20px;
 }
 
 .sidenav {
   height: 100%;
-  width: 200px;
+  width: 250px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -20,16 +20,24 @@ body {
   padding: 6px 6px 6px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: rgb(201, 28, 28);
+  color: rgb(240, 240, 240);
+  display: block;
+}
+.sidenav h2 {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgba(240, 240, 240, 0.616);
   display: block;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #cfa5a5;
 }
 
 .main {
-  margin-left: 200px; /* Same as the width of the sidenav */
+  margin-left: 250px; /* Same as the width of the sidenav */
+  padding-left: 20px;
 }
 
 @media screen and (max-height: 450px) {
