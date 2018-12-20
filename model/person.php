@@ -5,17 +5,17 @@ abstract class Person {
     private static $count = 0;
     private $id;
     private $lastname;
-    private $firstname;
+    private $firstname; // parameetrid
     
     abstract public function printInfo();
 
     public function __construct($lastname = null, $firstname = null) {
         $this->id = ++self::$count;
         $this->lastname = $lastname;
-        $this->firstname = $firstname;
+        $this->firstname = $firstname; // konstruktor
     }
 
-    public function __destruct() {
+    public function __destruct() { // destruktor
         $this->id = self::$count--;
     }
 
@@ -23,11 +23,11 @@ abstract class Person {
         return self::$count;
     }
 
-    public function __toString() {
-        return "{$this->firstname} {$this->lastname}";
+    public function __toString() { // printimis meetod
+        return $this->firstname. " " .$this->lastname;
     }
 
-    public function getId() {
+    public function getId() { // get/set meetodid
         return $this->id;
     }
 
@@ -46,4 +46,5 @@ abstract class Person {
     public function setFirstname($firstname) {
         $this->firstname = $firstname;
     }
+}
 ?>

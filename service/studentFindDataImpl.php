@@ -11,18 +11,19 @@ class StudentFindDataImpl implements FindData {
         for ($i = 0; $data = fgetcsv($file, 100, ";"); $i++) {
             $student = new Student($data[0], $data[1], $data[2]);
             $this->listStudents[] = $student;
-        }
+        } // konstruktor andmete lugemisega
     }
 
     public function findAll() {
-        return $this->listStudents;
+        return $this->listStudents; // find all meetod
     }
 
     public function findByCourse($course) {
         foreach ($this->listStudents as $student) {
             if($student->getCourse()==$course)
-            $this->listStudentsFinal[] = $student;
+                $this->listStudentsFinal[] = $student;
         }
-        return this->listStudentsFinal;
+        return $this->listStudentsFinal; // otsing kursuse järgi
     }
 }
+?>
